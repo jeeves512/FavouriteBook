@@ -21,6 +21,11 @@
     <%= form.number_field :published_year %>
   </div>
 
+  <div>
+    <% select_tag "Author", options_from_collection_for_select(Author.all, :id, :name), {:class=>'form-control'}  %>
+    <%= form.select :author_id, options_from_collection_for_select(Author.all, :id, :name), {:class=>'form-control'}%>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
