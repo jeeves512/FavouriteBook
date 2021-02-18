@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="card">
+	<div class="card-body">
+		<p>
+		  <strong>Name:</strong>
+		  <%= @author.name %>
+		</p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
-
-<p>
-  <strong>Birth year:</strong>
-  <%= @author.birth_year %>
-</p>
+		<p>
+		  <strong>Birth year:</strong>
+		  <%= @author.birth_year %>
+		</p>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

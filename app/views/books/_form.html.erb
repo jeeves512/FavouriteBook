@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :published_year %>
-    <%= form.number_field :published_year %>
+    <%= form.number_field :published_year, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="field form-group">
     <% select_tag "Author", options_from_collection_for_select(Author.all, :id, :name), {:class=>'form-control'}  %>
     <%= form.select :author_id, options_from_collection_for_select(Author.all, :id, :name), {:class=>'form-control'}%>
   </div>

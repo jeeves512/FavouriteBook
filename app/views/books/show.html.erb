@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="card">
+	<div class="card-body">
+		<p>
+		  <strong>Title:</strong>
+		  <%= @book.title %>
+		</p>
 
-<p>
-  <strong>Published year:</strong>
-  <%= @book.published_year %>
-</p>
+		<p>
+		  <strong>Published year:</strong>
+		  <%= @book.published_year %>
+		</p>
 
-<p>
-  <strong>Author name:</strong>
-  <%= @book.author.name %>
-</p>
-
+		<p>
+		  <strong>Author name:</strong>
+		  <%= @book.author.name %>
+		</p>
+	</div>
+</div>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
